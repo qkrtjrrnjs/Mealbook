@@ -18,6 +18,7 @@ class MealViewModel {
         self.categoryName = categoryName
     }
     // change
+    // another change
     func fetchData() {
         Task {
             do {
