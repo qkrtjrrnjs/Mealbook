@@ -17,7 +17,7 @@ class MealViewModel {
         self.apiService = apiService
         self.categoryName = categoryName
     }
-    
+    // change
     func fetchData() {
         Task {
             do {
