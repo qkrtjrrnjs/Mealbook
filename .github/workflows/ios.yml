@@ -11,4 +11,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Testing iOS app
-        run: exec ./.github/scripts/test_mealbook.sh
+        run: |
+        chmod +x ./.github/scripts/test_mealbook.sh
+        exec ./.github/scripts/test_mealbook.sh
