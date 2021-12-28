@@ -23,6 +23,7 @@ class MealViewModel {
             do {
                 let result: Meals = try await apiService.fetchData(for: .meal, with: categoryName)
                 self.meals.value = result.meals.sorted { $0.name < $1.name }
+                BUG BUG BUG COMMIT
             } catch {
                 self.errorMessage.value = error.localizedDescription
             }
