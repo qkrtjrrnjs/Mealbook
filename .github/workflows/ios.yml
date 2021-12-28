@@ -1,8 +1,7 @@
 name: Mealbook workflow
 
-on:
-  push:
-    branches: [ main ]
+on: [push, pull_request]
+
 jobs:
   test:
     name: Build and Test mealbook project
