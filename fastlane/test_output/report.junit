@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='MealbookTests.xctest' tests='2' failures='0'>
+  <testsuite name='MealbookTests.APIServiceTest' tests='2' failures='0'>
+    <testcase classname='MealbookTests.APIServiceTest' name='testFetchDataFailure' time='0.418'/>
+    <testcase classname='MealbookTests.APIServiceTest' name='testFetchDataSuccess' time='0.123'/>
+  </testsuite>
+</testsuites>
