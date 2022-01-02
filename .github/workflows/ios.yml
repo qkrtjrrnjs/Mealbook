@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Testing iOS app
-        run: |
-          chmod +x ./.github/scripts/test_mealbook.sh
-          exec ./.github/scripts/test_mealbook.sh
+      - name: Bundle Install
+        run: bundle install
+      - name: Unit tests
+        run: bundle exec fastlane tests
