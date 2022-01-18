@@ -11,13 +11,7 @@ class CategoryTableViewCell: UITableViewCell {
     
     static let identifier = "CategoryTableViewCellId"
 
-    let categoryNameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 20)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
+    let categoryNameLabel = UILabel.createLabel(font: .mediumFont)
     
     var category: Category? {
         didSet {

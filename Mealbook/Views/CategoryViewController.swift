@@ -10,12 +10,7 @@ import UIKit
 class CategoryViewController: UIViewController {
 
     let viewModel: CategoryViewModel
-    let categoryTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(CategoryTableViewCell.self, forCellReuseIdentifier: CategoryTableViewCell.identifier)
-        tableView.showsVerticalScrollIndicator = false
-        return tableView
-    }()
+    let categoryTableView = UITableView.createTableView(cellClass: CategoryTableViewCell.self, identifier: CategoryTableViewCell.identifier)
     
     init(viewModel: CategoryViewModel) {
         self.viewModel = viewModel

@@ -10,12 +10,7 @@ import UIKit
 class MealViewController: UIViewController {
     
     let viewModel: MealViewModel
-    let mealTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(MealTableViewCell.self, forCellReuseIdentifier: MealTableViewCell.identifier)
-        tableView.showsVerticalScrollIndicator = false
-        return tableView
-    }()
+    let mealTableView = UITableView.createTableView(cellClass: MealTableViewCell.self, identifier: MealTableViewCell.identifier)
     
     init(viewModel: MealViewModel) {
         self.viewModel = viewModel

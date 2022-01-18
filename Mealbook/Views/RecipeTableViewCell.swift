@@ -10,37 +10,10 @@ import UIKit
 class RecipeTableViewCell: UITableViewCell {
     static let identifier = "RecipeTableViewCellId"
     
-    let mealNameLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Bold", size: 25)
-        label.textAlignment = .center
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let ingredientsLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 19)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let measuresLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 19)
-        label.textAlignment = .right
-        label.numberOfLines = 0
-        return label
-    }()
-    
-    let instructionsLabel: UILabel = {
-        let label = UILabel()
-        label.font = UIFont(name: "AppleSDGothicNeo-Medium", size: 19)
-        label.textAlignment = .left
-        label.numberOfLines = 0
-        return label
-    }()
+    let mealNameLabel = UILabel.createLabel(font: .boldFont)
+    let ingredientsLabel = UILabel.createLabel(textAlignment: .left, font: .mediumFont)
+    let measuresLabel = UILabel.createLabel(textAlignment: .right, font: .mediumFont)
+    let instructionsLabel = UILabel.createLabel(textAlignment: .left, font: .mediumFont)
     
     let ingredientsMeasuresStackView = UIStackView()
     

@@ -10,14 +10,7 @@ import UIKit
 class RecipeViewController: UIViewController {
     
     let viewModel: RecipeViewModel
-    let recipeTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.register(RecipeTableViewCell.self, forCellReuseIdentifier: RecipeTableViewCell.identifier)
-        tableView.showsVerticalScrollIndicator = false
-        tableView.alwaysBounceVertical = false
-        tableView.separatorColor = .clear
-        return tableView
-    }()
+    let recipeTableView = UITableView.createTableView(cellClass: RecipeTableViewCell.self, identifier: RecipeTableViewCell.identifier)
 
     init(viewModel: RecipeViewModel) {
         self.viewModel = viewModel
@@ -42,6 +35,8 @@ class RecipeViewController: UIViewController {
         
         recipeTableView.delegate = self
         recipeTableView.dataSource = self
+        recipeTableView.alwaysBounceVertical = false
+        recipeTableView.separatorColor = .clear
         
         recipeTableView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
