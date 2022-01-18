@@ -61,8 +61,6 @@ class CategoryViewController: UIViewController {
                 self?.showAlert(with: errorMessage)
             }
         }
-        
-        
     }
 }
 
